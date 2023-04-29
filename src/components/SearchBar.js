@@ -1,6 +1,19 @@
 function SearchBar() {
     return (
-        <h1>SearchBar</h1>
+        <form className="form mb-2 mt-2">
+            <button>
+                <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input
+              className="input"
+              placeholder="Search music."
+              required=""
+              type="text"
+            />
+            <button className="reset" type="reset">
+                <i className="fa-solid fa-x"></i>
+            </button>
+        </form>
     );
 }
 

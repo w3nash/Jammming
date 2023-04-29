@@ -1,33 +1,41 @@
-#root {
-    background-color: black;
+.body {
+  background-color:palegreen
 }
 
 .my-card {
-    background-color: white;
-    padding: 1em;
-    padding-bottom: 1.1em;
-    border-radius: 15px;
-    margin: 1em;
+  background-color: white;
+  padding: 1em;
+  padding-bottom: 1.1em;
+  border-radius: 15px;
+  margin: 1em;
 }
 
 .my-card-header {
-    display: flex;
-    margin: 1em;
+  display: flex;
+  margin: 1em;
+}
+
+.head-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1em 1em;
 }
 
 .my-card-heading {
-    color: black;
-    font-size: 1.1em;
-    font-weight: bold;
-    align-self: center;
+  color: black;
+  font-size: 1.1em;
+  font-weight: bold;
+  align-self: center;
+  justify-content: space-around;
+  margin: 0 1em;
 }
 
 .track {
   display: flex;
   flex-direction: row;
-  height: 4em;
-  padding-left: 1em;
-  padding-right: 1em;
+  height: 5em;
+  padding: 1em;
   transform: rotate(180deg);
   justify-content: right;
   border-radius: 10px;
@@ -35,7 +43,7 @@
 
 .track:hover {
   cursor: pointer;
-  background-color: lightgray;
+  background-color:rgb(218, 250, 218);
 }
 
 .play {
@@ -51,18 +59,25 @@
   justify-self: center;
 }
 
+.spotify {
+  color: #1db954;
+}
+
+.playlist {
+  color: #1db954;
+}
+
 .album-cover {
-    position: relative;
-    margin-right: 1em;
-    height: 40px;
-    width: 40px;
-    background-color: rgb(233, 232, 232);
-    align-self: center;
-    border-radius: 5px;
+  margin-right: 1em;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(233, 232, 232);
+  border-radius: 5px;
 }
 
 .song {
-  position: relative;
+  display: inline-flex;
+  flex-direction: column;
   transform: rotate(180deg);
   margin-right: 1em;
   color: black;
@@ -70,9 +85,97 @@
 }
 
 .title {
-    margin-top: 10px;
+  margin-top: 1em;
+  font-size: 0.88em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .artist {
   font-size: 0.6em;
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 20em;
+  --height-of-input: 3em;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #1db954;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg,#fff);
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+.input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+/* close button shown when typing */
+.input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .song {
+    width: 6.5em;
+    white-space: nowrap;
+  }
 }

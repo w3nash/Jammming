@@ -1,12 +1,15 @@
-import Track from "./Track";
+import Tracklist from "./Tracklist";
 
 function Playlist() {
     return (
         <div className="my-card">
             <div className="my-card-head">
-                <p className="my-card-heading">Playlist</p>
+                <div className="head-content">
+                    <i class="fa-solid fa-table-list fa-2xl playlist"></i>
+                    <h2 className="my-card-heading">Playlist</h2>
+                </div>
             </div>
-            <Track title="Better" artist="Khalid" />
+            <Tracklist result={[{title: "Better", artist: "Khalid"}, {title: "Just The Way You Are", artist: "Khalid"}, {title: "Better", artist: "Khalid"}]} />
         </div>
     );
 }
