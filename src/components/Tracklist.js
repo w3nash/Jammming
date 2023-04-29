@@ -1,6 +1,13 @@
-function Tracklist() {
+import Track from "./Track";
+
+function Tracklist(props) {
+    const list = props.result.map(item => {
+        return <Track title={item.title} artist={item.artist} />;
+    })
     return (
-        <h1>Tracklist</h1>
+        <>
+            {list}
+        </>
     );
 }
 

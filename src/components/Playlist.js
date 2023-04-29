@@ -1,6 +1,13 @@
+import Track from "./Track";
+
 function Playlist() {
     return (
-        <h1>Playlist</h1>
+        <div className="my-card">
+            <div className="my-card-head">
+                <p className="my-card-heading">Playlist</p>
+            </div>
+            <Track title="Better" artist="Khalid" />
+        </div>
     );
 }
 

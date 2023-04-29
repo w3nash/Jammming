@@ -1,6 +1,6 @@
 function SearchBar() {
     return (
-        <h1>Search Bar</h1>
+        <h1>SearchBar</h1>
     );
 }
 
