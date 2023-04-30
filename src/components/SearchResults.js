@@ -1,6 +1,6 @@
 import Tracklist from "./Tracklist";
 
-function SearchResults() {
+function SearchResults(props) {
     return (
         <div className="my-card">
             <div className="my-card-head">
@@ -9,7 +9,7 @@ function SearchResults() {
                     <h2 className="my-card-heading">Search Results</h2>
                 </div>
             </div>
-            <Tracklist result={[{title: "Better", artist: "Khalid"}, {title: "Just The Way You Are", artist: "Khalid"}, {title: "Better", artist: "Khalid"}]} />
+            <Tracklist playlist={props.playlist} setPlaylist={props.setPlaylist} results={props.results}/>
         </div>
     );
 }

@@ -1,5 +1,18 @@
+@import url("https://use.typekit.net/nqy6qql.css");
+
+.header {
+  font-weight: 700;
+  font-size: 4em;
+}
+
+.introduction {
+  max-width: 40em;
+  margin: 0 auto;
+}
+
 .body {
-  background-color:palegreen
+  background-color:palegreen;
+  font-family: "sofia-pro", sans-serif;
 }
 
 .my-card {
@@ -36,27 +49,15 @@
   flex-direction: row;
   height: 5em;
   padding: 1em;
-  transform: rotate(180deg);
-  justify-content: right;
   border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .track:hover {
   cursor: pointer;
   background-color:rgb(218, 250, 218);
-}
-
-.play {
-  position: relative;
-  left: 0.35em;
-  height: 1.6em;
-  width: 1.6em;
-  clip-path: polygon(50% 50%, 100% 50%, 75% 6.6%);
-  background-color: black;
-  transform: rotate(-90deg);
-  align-self: center;
-  margin-top: 0.7em;
-  justify-self: center;
 }
 
 .spotify {
@@ -68,7 +69,7 @@
 }
 
 .album-cover {
-  margin-right: 1em;
+  margin-right: 1em; 
   height: 50px;
   width: 50px;
   background-color: rgb(233, 232, 232);
@@ -76,12 +77,12 @@
 }
 
 .song {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  transform: rotate(180deg);
   margin-right: 1em;
   color: black;
   align-self: center;
+  justify-content: center;
 }
 
 .title {
@@ -173,9 +174,83 @@
   visibility: visible;
 }
 
+button.clear {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 1em;
+ border: 0px solid transparent;
+ background-color: rgba(100,77,237,0.08);
+ border-radius: 1.25em;
+ transition: all 0.2s linear;
+}
+
+button.clear:hover {
+  background-color: palegreen;
+ box-shadow: 3.4px 2.5px 4.9px rgba(0, 0, 0, 0.025),
+  8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035),
+  17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045),
+  36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055),
+  99px 72px 143px rgba(0, 0, 0, 0.08);
+}
+
+.clear {
+ position: relative;
+ display: inline-block;
+}
+
+.clear .cleartext {
+ visibility: hidden;
+ width: 4em;
+ background-color: palegreen;
+ color: black;
+ text-align: center;
+ border-radius: 6px;
+ padding: 5px 0;
+ position: absolute;
+ z-index: 1;
+ top: 25%;
+ left: 110%;
+}
+
+.clear .cleartext::after {
+ content: "";
+ position: absolute;
+ top: 50%;
+ right: 100%;
+ margin-top: -5px;
+ border-width: 5px;
+ border-style: solid;
+ border-color: transparent palegreen transparent transparent;
+}
+
+.clear:hover .cleartext {
+ visibility: visible;
+}
+
+.my-button {
+  background: black !important;
+  border-color: rgba(100,77,237,0.08) !important;
+  color: white !important;
+}
+
+.my-button:hover {
+  background-color: #1db954 !important;
+}
+
 @media (max-width: 768px) {
   .song {
     width: 6.5em;
     white-space: nowrap;
   }
+
+  .header {
+    font-size: 3em;
+  }
+
+  .introduction {
+    font-size: 0.8em;
+  }
+
 }

@@ -1,12 +1,18 @@
-function Track({title, artist}) {
+function Track(props) {
+
+    function handleClick(item) {
+        const newItem = {...item}; // create a copy of the clicked item
+        props.setPlaylist([...props.playlist, newItem]); // add the copy to the list
+    }
+
     return (
-        <div className="track mb-2">
+        <div className="track mb-2" onClick={() => handleClick(props.item)}>
+            <i className="fa-solid fa-plus me-3"></i>
+            <img alt={props.name} src={props.src} className="album-cover" />
             <div className="song">
-                <p className="title">{title}</p>
-                <p className="artist">{artist}</p>
+                <p className="title">{props.name}</p>
+                <p className="artist">{props.artist}</p>
             </div>
-            <img alt={title} src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228" className="album-cover" />
-            <div className="play"></div>
         </div>
     );
 }

@@ -1,8 +1,8 @@
 import Track from "./Track";
 
 function Tracklist(props) {
-    const list = props.result.map(item => {
-        return <Track title={item.title} artist={item.artist} />;
+    const list = props.results.map(item => {
+        return <Track key={item.uri} item={item} playlist={props.playlist} setPlaylist={props.setPlaylist} name={item.name} artist={item.artists[0].name} src={item.album.images[0].url}/>;
     })
     return (
         <>

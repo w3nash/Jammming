@@ -1,6 +1,6 @@
-function SearchBar() {
+function SearchBar({handleEnter, handleChange}) {
     return (
-        <form className="form mb-2 mt-2">
+        <form className="form mb-2 mt-2" action="#">
             <button>
                 <i className="fa-solid fa-magnifying-glass"></i>
             </button>
@@ -9,6 +9,8 @@ function SearchBar() {
               placeholder="Search music."
               required=""
               type="text"
+              onKeyUp={handleEnter}
+              onChange={handleChange}
             />
             <button className="reset" type="reset">
                 <i className="fa-solid fa-x"></i>
