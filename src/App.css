@@ -13,6 +13,7 @@
 .body {
   background-color:palegreen;
   font-family: "sofia-pro", sans-serif;
+  scrollbar-width: auto;
 }
 
 .my-card {

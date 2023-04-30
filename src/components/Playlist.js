@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import Tracklist from "./Tracklist";
 
 function Playlist(props) {
@@ -14,7 +14,7 @@ function Playlist(props) {
                     </button>
                 </div>
             </div>
-            <Tracklist playlist={props.playlist} setPlaylist={props.setPlaylist} results={props.playlist}/>
+            <Tracklist playlist={props.playlist} p={true} setPlaylist={props.setPlaylist} results={props.playlist}/>
             <Row>
                 <Col className="d-grid gap-2 mt-2">
                     <Button className="my-button" size="md">Create Playlist</Button>

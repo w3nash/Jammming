@@ -59,7 +59,7 @@ function App() {
   }, [])
 
   return (
-    <Container>
+    <Container className='overflow-auto'>
       <Row className='mt-4 text-center'>
         <Col>
           <h1 className='header'>Jammming! <i class="fa-solid fa-headphones"></i></h1>
