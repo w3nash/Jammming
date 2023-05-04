@@ -1,13 +1,13 @@
 function SearchBar({handleEnter, handleChange}) {
     return (
-        <form className="form mb-2 mt-2" action="#">
+        <form className="form mb-2 mt-2" action="#" onSubmit={event => event.preventDefault()}>
             <button>
                 <i className="fa-solid fa-magnifying-glass"></i>
             </button>
             <input
               className="input"
               placeholder="Search music."
-              required=""
+              required
               type="text"
               onKeyUp={handleEnter}
               onChange={handleChange}
