@@ -8,31 +8,32 @@ function Playlist(props) {
             <div className="my-card-head">
                 <div className="head-content">
                     <i className="fa-solid fa-table-list fa-2xl playlist"></i>
-                    <h2 className="my-card-heading">Playlist</h2>
-                    <button className="clear" onClick={props.handleClear}>
-                        <i className="fa-solid fa-x"></i>
-                        <span className="cleartext">Clear</span>
-                    </button>
+                    <input
+                        className="playlist-header"
+                        defaultValue={"New Playlist"}
+                        onChange={props.handleChange}
+                    />
                 </div>
             </div>
             <TracklistContainer
                 playlist={props.playlist}
                 p={1}
                 setPlaylist={props.setPlaylist}
-                results={props.playlist} />
+                results={props.playlist}
+            />
             <Row>
                 <Col className="d-grid gap-2 mt-2">
                     <Button
                         className="my-button"
                         size="md"
-                        onClick={props.handleShow} 
+                        onClick={props.CreatePlaylist} 
                         disabled={props.userID === "" ? true : false}
                     >
                         Create Playlist
                     </Button>
                 </Col>
             </Row>
-            <MyModal handleShow={props.handleShow} handleClose={props.handleClose} show={props.show} setPlaylistName={props.setPlaylistName} />
+            <MyModal handleClose={props.handleClose} show={props.show} />
         </div>
     );
 }

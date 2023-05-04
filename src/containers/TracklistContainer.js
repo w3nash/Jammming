@@ -10,8 +10,8 @@ function TracklistContainer(props) {
             playlist={props.playlist}
             setPlaylist={props.setPlaylist}
             name={item.name}
-            artist={item.artists[0].name}
-            src={item.album.images[0].url}
+            artist={item.artist}
+            src={item.src}
         />;
     })
     return (

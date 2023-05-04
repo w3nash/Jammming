@@ -3,28 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchResults from './containers/SearchResultsContainer';
 import SearchBarContainer from './containers/SearchBarContainer';
 import PlaylistContainer from './containers/PlaylistContainer';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { useEffect, useState } from 'react';
-import { getToken, getUserID, login } from './util/Spotify';
-
-const SPOTIFY_CLIENT_ID = "fad7a273a6ce474ca6a4f9c410f0d535";
-const SPOTIFY_CLIENT_SECRET = "78bad78599c948b5b719a1789692bf1b"
+import { Container, Row, Col } from 'react-bootstrap';
+import { useState } from 'react';
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
-  const [authToken, setAuthToken] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [playlist, setPlaylist] = useState([]);
-  const [userID, setUserID] = useState("");
+  const [playlistName, setPlaylistName] = useState("New Playlist");
     
-  useEffect(() => {
-    getToken(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, setAuthToken, authToken, setUserID);
-  }, [])
-
-  function handleClick() {
-    login(SPOTIFY_CLIENT_ID);
-  }
-
   return (
     <Container className='overflow-auto'>
       <Row className='mt-4 text-center'>
@@ -36,25 +23,10 @@ function App() {
       <Row>
         <Col className='d-flex justify-content-center mt-3'>
           <SearchBarContainer
-            authToken={authToken}
-            searchInput={searchInput}
-            setSearchInput={setSearchInput}
             setSearchResults={setSearchResults}
+            setSearchInput={setSearchInput}
+            searchInput={searchInput}
           />
-        </Col>
-      </Row>
-      <Row>
-        <Col className='mt-2 text-center login-container'>
-          {userID === ""
-          ? <Button
-            className="my-button"
-            size="md"
-            onClick={handleClick}
-          >
-            Log in Spotify <i className="fa-brands fa-spotify fa-md"></i>
-          </Button>
-          : <h6>Hello, {userID}. 👋</h6>
-          }
         </Col>
       </Row>
       <Row className='mx-3 row row-cols-2'>
@@ -66,11 +38,11 @@ function App() {
         </Col>
         <Col className='col-12 col-md-6'> 
           <PlaylistContainer
-            SPOTIFY_CLIENT_ID={SPOTIFY_CLIENT_ID}
             results={searchResults}
             playlist={playlist}
             setPlaylist={setPlaylist}
-            userID={userID}
+            playlistName={playlistName}
+            setPlaylistName={setPlaylistName}
           />
         </Col>
       </Row>

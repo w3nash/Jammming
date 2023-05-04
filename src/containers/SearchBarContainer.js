@@ -1,17 +1,22 @@
+import { useCallback } from "react";
 import SearchBar from "../components/SearchBar";
-import { search } from "../util/Spotify";
+import Spotify from "../util/Spotify";
 
-function SearchBarContainer({ authToken, searchInput, setSearchInput, setSearchResults }) {
+function SearchBarContainer({setSearchResults, setSearchInput, searchInput}) {
 
-    const handleEnter = async (event) => {
+    const goSearch = useCallback((searchInput) => {
+        Spotify.search(searchInput).then(setSearchResults);
+    }, []);
+
+    const handleEnter = useCallback((event) => {
         if (event.key === "Enter") {
-            search(authToken, searchInput, setSearchResults);
+            goSearch(searchInput);
         }
-    }
+    }, [goSearch, searchInput]);
 
-    const handleChange = (event) => {
+    const handleChange = useCallback((event) => {
         setSearchInput(event.target.value);
-    }
+    }, []);
 
     return (
         <SearchBar

@@ -1,14 +1,6 @@
-import { Modal, Button, Form } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 
 function MyModal(props) {
-  function handlePlaylistName(event) {
-    props.setPlaylistName(event.target.value);
-  }
-
-  function handleUserID(event) {
-    props.setUserID(event.target.value);
-  }
-
   return (
     <Modal
         show={props.show}
@@ -17,36 +9,16 @@ function MyModal(props) {
         keyboard={false}
     >
         <Modal.Header closeButton>
-        <Modal.Title>Create Playlist</Modal.Title>
+        <Modal.Title>Success ✅</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="playlist-name">
-              <Form.Label>Playlist Name</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="My Coolest Playlist"
-                autoFocus
-                required
-                onChange={handlePlaylistName}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="user-id">
-              <Form.Label>Playlist Name</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="iamcool"
-                required
-                onChange={handleUserID}
-              />
-            </Form.Group>
-          </Form>
+          <p>You have successfully created your playlist. 👌</p>
+          <p>You may now check it in your spotify account. 🎶</p>
         </Modal.Body>
         <Modal.Footer>
-        <Button variant="danger" onClick={props.handleClose}>
-            Close
+        <Button variant="success" onClick={props.handleClose}>
+            Okay
         </Button>
-        <Button className="my-button" onClick={props.createPlaylist}>Create</Button>
         </Modal.Footer>
     </Modal>
   )

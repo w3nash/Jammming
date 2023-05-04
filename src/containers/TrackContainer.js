@@ -1,20 +1,27 @@
+import { useCallback } from "react";
 import Track from "../components/Track";
 
 function TrackContainer(props) {
 
-    function handleClick(item) {
-        if(!props.p) {
-                const newItem = {...item}; // create a copy of the clicked item
-                props.setPlaylist([...props.playlist, newItem]); // add the copy to the list
-        } else {
-            const filtered = props.playlist.filter(i => i !== item);
-            props.setPlaylist(filtered);
-        }
-    }
+    const addTrack = useCallback(
+        (track) => {
+            if (props.playlist.some((savedTrack) => savedTrack.id === track.id))
+            return;
+    
+            props.setPlaylist((prevTracks) => [...prevTracks, track]);
+        },
+        [props.playlist]
+      );
+    
+      const removeTrack = useCallback((track) => {
+        props.setPlaylist((prevTracks) =>
+          prevTracks.filter((currentTrack) => currentTrack.id !== track.id)
+        );
+      }, []);
 
     return (
         <Track
-            handleClick={handleClick}
+            handleClick={props.p === 1 ? removeTrack : addTrack}
             item={props.item}
             name={props.name}
             src={props.src}
