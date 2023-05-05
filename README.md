@@ -1,7 +1,8 @@
 # Jammming! 🎶🎵🎧
 
 ## Video Demo 📺
-[🔗 Link to YouTube video demo goes here 🔗]
+
+[🔗 Watch it on [YouTube](https://youtu.be/rh5sbvBf2fc) 🔗]
 
 ## Description 📝
 
@@ -15,9 +16,9 @@ Getting started with Jammming is easy! Simply log in to your Spotify account, se
 
 ## Requirements 💻
 
-* Node.js
-* npm
-* React
+- Node.js
+- npm
+- React
 
 ## Contributing 🤝
 
