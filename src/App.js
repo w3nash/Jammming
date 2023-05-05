@@ -55,6 +55,11 @@ function App() {
 					/>
 				</Col>
 			</Row>
+			<hr />
+			<footer className="mb-2">
+				<h5>Created by Jonash Marcelino 👌</h5>
+				<p>Copyright &copy; 2023</p>
+			</footer>
 		</Container>
 	);
 }
