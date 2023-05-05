@@ -20,10 +20,11 @@ function App() {
 						Jammming! <i className="fa-solid fa-headphones"></i>
 					</h1>
 					<p className="introduction">
-						Welcome to Jammming - the ultimate platform for creating custom
-						Spotify playlists. Find and add your favorite tracks in just a few
-						clicks and create the perfect playlist for any occasion. Search now
-						and start exploring the world of music with us!
+						Welcome to Jammming! <i className="fa-solid fa-headphones"></i> -
+						the ultimate platform for creating custom Spotify playlists. Find
+						and add your favorite tracks in just a few clicks and create the
+						perfect playlist for any occasion. Search now and start exploring
+						the world of music with us!
 					</p>
 				</Col>
 			</Row>

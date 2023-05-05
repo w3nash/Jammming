@@ -179,10 +179,12 @@
 	background: black !important;
 	border-color: rgba(100, 77, 237, 0.08) !important;
 	color: white !important;
+	transition: all 0.2s ease-in-out;
 }
 
 .my-button:hover {
 	background-color: #1db954 !important;
+	transform: scale(1.01);
 }
 
 .inp-grp {
@@ -196,6 +198,7 @@
 	margin: 0 1em;
 	outline: transparent;
 	border: transparent;
+	background: transparent;
 }
 
 @media (max-width: 768px) {
