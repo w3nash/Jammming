@@ -1,9 +1,5 @@
 function Tracklist(props) {
-    return (
-        <>
-            {props.list}
-        </>
-    );
+	return <>{props.list}</>;
 }
 
 export default Tracklist;

@@ -1,215 +1,214 @@
-@import url("https://use.typekit.net/nqy6qql.css");
+@import url('https://use.typekit.net/nqy6qql.css');
 
 .header {
-  font-weight: 700;
-  font-size: 4em;
+	font-weight: 700;
+	font-size: 4em;
 }
 
 .introduction {
-  max-width: 40em;
-  margin: 0 auto;
+	max-width: 40em;
+	margin: 0 auto;
 }
 
 .body {
-  background-color:palegreen;
-  font-family: "sofia-pro", sans-serif;
-  scrollbar-width: auto;
+	background-color: palegreen;
+	font-family: 'sofia-pro', sans-serif;
+	scrollbar-width: auto;
 }
 
 .my-card {
-  background-color: white;
-  padding: 1em;
-  padding-bottom: 1.1em;
-  border-radius: 15px;
-  margin: 1em 0;
+	background-color: white;
+	padding: 1em;
+	padding-bottom: 1.1em;
+	border-radius: 15px;
+	margin: 1em 0;
 }
 
 .my-card-header {
-  display: flex;
-  margin: 1em;
+	display: flex;
+	margin: 1em;
 }
 
 .head-content {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 1em 1em;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 1em 1em;
 }
 
 .my-card-heading {
-  color: black;
-  font-size: 1.1em;
-  font-weight: bold;
-  align-self: center;
-  justify-content: space-around;
-  margin: 0 1em;
+	color: black;
+	font-size: 1.1em;
+	font-weight: bold;
+	align-self: center;
+	justify-content: space-around;
+	margin: 0 1em;
 }
 
 .track {
-  display: flex;
-  flex-direction: row;
-  height: 5em;
-  padding: 1em;
-  border-radius: 10px;
-  transition: background-color 0.3s ease-in-out;
-  justify-content: flex-start;
-  align-items: center;
+	display: flex;
+	flex-direction: row;
+	height: 5em;
+	padding: 1em;
+	border-radius: 10px;
+	transition: background-color 0.3s ease-in-out;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .track:hover {
-  cursor: pointer;
-  background-color:rgb(218, 250, 218);
+	cursor: pointer;
+	background-color: rgb(218, 250, 218);
 }
 
 .spotify {
-  color: #1db954;
+	color: #1db954;
 }
 
 .playlist {
-  color: #1db954;
+	color: #1db954;
 }
 
 .album-cover {
-  margin-right: 1em; 
-  height: 50px;
-  width: 50px;
-  background-color: rgb(233, 232, 232);
-  border-radius: 5px;
+	margin-right: 1em;
+	height: 50px;
+	width: 50px;
+	background-color: rgb(233, 232, 232);
+	border-radius: 5px;
 }
 
 .song {
-  display: flex;
-  flex-direction: column;
-  margin-right: 1em;
-  color: black;
-  align-self: center;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	margin-right: 1em;
+	color: black;
+	align-self: center;
+	justify-content: center;
 }
 
 .title {
-  margin-top: 1em;
-  font-size: 0.88em;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	margin-top: 1em;
+	font-size: 0.88em;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .artist {
-  font-size: 0.6em;
+	font-size: 0.6em;
 }
 
 /* From uiverse.io by @satyamchaudharydev */
 /* removing default style of button */
 
 .form button {
-  border: none;
-  background: none;
-  color: #8b8ba7;
+	border: none;
+	background: none;
+	color: #8b8ba7;
 }
 /* styling of whole input container */
 .form {
-  --timing: 0.3s;
-  --width-of-input: 20em;
-  --height-of-input: 3em;
-  --border-height: 2px;
-  --input-bg: #fff;
-  --border-color: #1db954;
-  --border-radius: 30px;
-  --after-border-radius: 1px;
-  position: relative;
-  width: var(--width-of-input);
-  height: var(--height-of-input);
-  display: flex;
-  align-items: center;
-  padding-inline: 0.8em;
-  border-radius: var(--border-radius);
-  transition: border-radius 0.5s ease;
-  background: var(--input-bg,#fff);
+	--timing: 0.3s;
+	--width-of-input: 20em;
+	--height-of-input: 3em;
+	--border-height: 2px;
+	--input-bg: #fff;
+	--border-color: #1db954;
+	--border-radius: 30px;
+	--after-border-radius: 1px;
+	position: relative;
+	width: var(--width-of-input);
+	height: var(--height-of-input);
+	display: flex;
+	align-items: center;
+	padding-inline: 0.8em;
+	border-radius: var(--border-radius);
+	transition: border-radius 0.5s ease;
+	background: var(--input-bg, #fff);
 }
 /* styling of Input */
 .input {
-  font-size: 0.9rem;
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  padding-inline: 0.5em;
-  padding-block: 0.7em;
-  border: none;
+	font-size: 0.9rem;
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+	padding-inline: 0.5em;
+	padding-block: 0.7em;
+	border: none;
 }
 /* styling of animated border */
 .form:before {
-  content: "";
-  position: absolute;
-  background: var(--border-color);
-  transform: scaleX(0);
-  transform-origin: center;
-  width: 100%;
-  height: var(--border-height);
-  left: 0;
-  bottom: 0;
-  border-radius: 1px;
-  transition: transform var(--timing) ease;
+	content: '';
+	position: absolute;
+	background: var(--border-color);
+	transform: scaleX(0);
+	transform-origin: center;
+	width: 100%;
+	height: var(--border-height);
+	left: 0;
+	bottom: 0;
+	border-radius: 1px;
+	transition: transform var(--timing) ease;
 }
 /* Hover on Input */
 .form:focus-within {
-  border-radius: var(--after-border-radius);
+	border-radius: var(--after-border-radius);
 }
 
 .input:focus {
-  outline: none;
+	outline: none;
 }
 /* here is code of animated border */
 .form:focus-within:before {
-  transform: scale(1);
+	transform: scale(1);
 }
 /* styling of close button */
 /* == you can click the close button to remove text == */
 .reset {
-  border: none;
-  background: none;
-  opacity: 0;
-  visibility: hidden;
+	border: none;
+	background: none;
+	opacity: 0;
+	visibility: hidden;
 }
 /* close button shown when typing */
 .input:not(:placeholder-shown) ~ .reset {
-  opacity: 1;
-  visibility: visible;
+	opacity: 1;
+	visibility: visible;
 }
 
 .my-button {
-  background: black !important;
-  border-color: rgba(100,77,237,0.08) !important;
-  color: white !important;
+	background: black !important;
+	border-color: rgba(100, 77, 237, 0.08) !important;
+	color: white !important;
 }
 
 .my-button:hover {
-  background-color: #1db954 !important;
+	background-color: #1db954 !important;
 }
 
 .inp-grp {
-  display: flex;
+	display: flex;
 }
 
 .playlist-header {
-  color: black;
-  font-size: 1.1em;
-  font-weight: bold;
-  margin: 0 1em;
-  outline: transparent;
-  border: transparent;
+	color: black;
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 0 1em;
+	outline: transparent;
+	border: transparent;
 }
 
 @media (max-width: 768px) {
-  .song {
-    width: 6.5em;
-    white-space: nowrap;
-  }
+	.song {
+		width: 6.5em;
+		white-space: nowrap;
+	}
 
-  .header {
-    font-size: 3em;
-  }
+	.header {
+		font-size: 3em;
+	}
 
-  .introduction {
-    font-size: 0.8em;
-  }
-
+	.introduction {
+		font-size: 0.8em;
+	}
 }
